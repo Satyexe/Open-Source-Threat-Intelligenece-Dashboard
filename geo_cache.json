@@ -1,0 +1,429 @@
+{
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-2776": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.27"
+  },
+  "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53770": {
+    "lat": 47.6739881,
+    "lon": -122.121512,
+    "city": "Redmond",
+    "country": "United States",
+    "query": "13.107.246.58"
+  },
+  "https://www.dlink.com/uk/en/products/dnr-322l-cloud-network-video-recorder": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.66.137.42"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2022-40799": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://support.dlink.com/productinfo.aspx?m=DCS-2530L": {
+    "lat": 45.839855,
+    "lon": -119.7005834,
+    "city": "Boardman",
+    "country": "United States",
+    "query": "54.187.177.55"
+  },
+  "https://www.wftpserver.com/serverhistory.htm": {
+    "lat": 50.1109221,
+    "lon": 8.6821267,
+    "city": "Frankfurt",
+    "country": "Germany",
+    "query": "185.111.111.157"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-54309": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-53770": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-25257": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://chromereleases.googleblog.com/2025/07/stable-channel-update-for-desktop_15.html": {
+    "lat": 28.6618976,
+    "lon": 77.2273958,
+    "city": "New Delhi",
+    "country": "India",
+    "query": "142.250.194.1"
+  },
+  "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-49706": {
+    "lat": 47.6739881,
+    "lon": -122.121512,
+    "city": "Redmond",
+    "country": "United States",
+    "query": "13.107.246.68"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2023-2533": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://www.papercut.com/kb/Main/SecurityBulletinJune2023": {
+    "lat": 39.0997265,
+    "lon": -94.5785667,
+    "city": "Kansas City",
+    "country": "United States",
+    "query": "34.95.115.145"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2020-25079": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://fortiguard.fortinet.com/psirt/FG-IR-25-151": {
+    "lat": 35.6549037,
+    "lon": 139.6945698,
+    "city": "Shibuya City",
+    "country": "Japan",
+    "query": "154.52.29.100"
+  },
+  "https://documentation.sysaid.com/docs/24-40-60": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "104.18.6.159"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-6558": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-20337": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://www.crushftp.com/crush11wiki/Wiki.jsp?page=CompromiseJuly2025": {
+    "lat": 40.8584328,
+    "lon": -74.1637553,
+    "city": "Clifton",
+    "country": "United States",
+    "query": "104.236.78.254"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-49704": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-47812": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-49704": {
+    "lat": 47.6739881,
+    "lon": -122.121512,
+    "city": "Redmond",
+    "country": "United States",
+    "query": "13.107.246.68"
+  },
+  "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-unauth-rce-ZAd2GnJ6": {
+    "lat": 32.9483335,
+    "lon": -96.7298519,
+    "city": "Richardson",
+    "country": "United States",
+    "query": "72.163.15.137"
+  },
+  "https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/": {
+    "lat": 28.6139391,
+    "lon": 77.2090212,
+    "city": "New Delhi",
+    "country": "India",
+    "query": "23.215.197.197"
+  },
+  "https://supportannouncement.us.dlink.com/announcement/publication.aspx?name=SAP10180": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "40.78.16.167"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-20281": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-49706": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2020-25078": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://www.cisa.gov/news-events/alerts/2025/07/20/microsoft-releases-guidance-exploitation-sharepoint-vulnerability-cve-2025-53770": {
+    "lat": 28.6139391,
+    "lon": 77.2090212,
+    "city": "New Delhi",
+    "country": "India",
+    "query": "23.10.230.212"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-2775": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-8088": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://support.citrix.com/external/article/691941/citrix-session-recording-security-bullet.html": {
+    "lat": 45.839855,
+    "lon": -119.7005834,
+    "city": "Boardman",
+    "country": "United States",
+    "query": "54.149.31.254"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2024-8068": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://support.apple.com/en-us/124927": {
+    "lat": 22.572646,
+    "lon": 88.363895,
+    "city": "Kolkata",
+    "country": "India",
+    "query": "2.22.180.58"
+  },
+  "https://support.apple.com/en-us/124928": {
+    "lat": 22.572646,
+    "lon": 88.363895,
+    "city": "Kolkata",
+    "country": "India",
+    "query": "2.22.180.58"
+  },
+  "https://learn.microsoft.com/en-us/security-updates/securitybulletins/2007/ms07-015": {
+    "lat": 28.6139391,
+    "lon": 77.2090212,
+    "city": "New Delhi",
+    "country": "India",
+    "query": "23.211.226.106"
+  },
+  "https://www.win-rar.com/singlenewsview.html?&L=0&tx_ttnews%5Btt_news%5D=283&cHash=a64b4a8f662d3639dec8d65f47bc93c5": {
+    "lat": 50.3986005,
+    "lon": 8.0795783,
+    "city": "Limburg",
+    "country": "Germany",
+    "query": "51.195.68.163"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-48384": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://learn.microsoft.com/en-us/security-updates/securitybulletins/2013/ms13-080": {
+    "lat": 22.572646,
+    "lon": 88.363895,
+    "city": "Kolkata",
+    "country": "India",
+    "query": "2.23.48.52"
+  },
+  "https://alas.aws.amazon.com/AL2/ALAS2-2025-2941.html": {
+    "lat": 19.0759837,
+    "lon": 72.8776559,
+    "city": "Mumbai",
+    "country": "India",
+    "query": "18.155.107.79"
+  },
+  "https://linux.oracle.com/errata/ELSA-2025-11534.html": {
+    "lat": 18.9832829,
+    "lon": 73.108491,
+    "city": "Navi Mumbai",
+    "country": "India",
+    "query": "49.44.114.82"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2024-8069": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-54948": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://status.n-able.com/2025/08/13/announcing-the-ga-of-n-central-2025-3-1/": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "192.0.78.12"
+  },
+  "https://support.apple.com/en-us/124925": {
+    "lat": 22.572646,
+    "lon": 88.363895,
+    "city": "Kolkata",
+    "country": "India",
+    "query": "2.22.180.58"
+  },
+  "2.9.10.7": {
+    "lat": 43.832978,
+    "lon": 5.206745,
+    "city": "M\u00e9nerbes",
+    "country": "France",
+    "query": "2.9.10.7"
+  },
+  "https://support.apple.com/en-us/124929": {
+    "lat": 22.572646,
+    "lon": 88.363895,
+    "city": "Kolkata",
+    "country": "India",
+    "query": "2.22.180.58"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-8875": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "2.9.10.5": {
+    "lat": 43.832978,
+    "lon": 5.206745,
+    "city": "M\u00e9nerbes",
+    "country": "France",
+    "query": "2.9.10.5"
+  },
+  "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-48384": {
+    "lat": 47.6739881,
+    "lon": -122.121512,
+    "city": "Redmond",
+    "country": "United States",
+    "query": "13.107.246.48"
+  },
+  "https://access.redhat.com/errata/RHSA-2025:13933": {
+    "lat": 22.572646,
+    "lon": 88.363895,
+    "city": "Kolkata",
+    "country": "India",
+    "query": "23.212.164.202"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-8876": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-43300": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "2.9.10.8": {
+    "lat": 43.832978,
+    "lon": 5.206745,
+    "city": "M\u00e9nerbes",
+    "country": "France",
+    "query": "2.9.10.8"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2013-3893": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2025-7775": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX694938": {
+    "lat": 45.839855,
+    "lon": -119.7005834,
+    "city": "Boardman",
+    "country": "United States",
+    "query": "54.71.226.79"
+  },
+  "https://success.trendmicro.com/en-US/solution/KA-0020652": {
+    "lat": 28.6139391,
+    "lon": 77.2090212,
+    "city": "New Delhi",
+    "country": "India",
+    "query": "23.0.241.81"
+  },
+  "https://support.apple.com/en-us/124926": {
+    "lat": 22.572646,
+    "lon": 88.363895,
+    "city": "Kolkata",
+    "country": "India",
+    "query": "2.22.180.58"
+  },
+  "https://nvd.nist.gov/vuln/detail/CVE-2007-0671": {
+    "lat": 37.718128,
+    "lon": -122.4343849,
+    "city": "San Francisco",
+    "country": "United States",
+    "query": "172.65.90.26"
+  },
+  "https://github.com/git/git/security/advisories/GHSA-vwqx-4fm8-6qc9": {
+    "lat": 18.5204303,
+    "lon": 73.8567437,
+    "city": "Pune",
+    "country": "India",
+    "query": "20.207.73.82"
+  }
+}

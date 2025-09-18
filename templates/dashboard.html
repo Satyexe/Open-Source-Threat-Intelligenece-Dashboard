@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Open Threat Intel Dashboard - One Window</title>
+<link rel="icon" type="image/png" href="/static/images/logo.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body {
+  background: #0b1622;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-rows: 1fr 1.2fr 2fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 12px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #101a28;
+  border-radius: 8px;
+  padding: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3, .card h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: #00bcd4;
+}
+
+.scrollable {
+  overflow-y: auto;
+}
+
+#feed-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+#feed-table th, #feed-table td {
+  padding: 6px;
+  text-align: left;
+}
+#feed-table tbody tr:nth-child(odd) {
+  background: rgba(255,255,255,0.03);
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-container {
+  flex: 1;
+}
+
+/* ====== Ellipsis Truncation for Table Cells ====== */
+td.title-cell, td.description-cell {
+  max-width: 250px; /* Adjust per your preference */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+td.title-cell:hover, td.description-cell:hover {
+  white-space: normal;
+  overflow: visible;
+  background: #0b1622;
+  position: relative;
+  z-index: 5;
+}
+</style>
+</head>
+<body>
+
+<div class="main-grid">
+  <!-- Row 1 -->
+  <div class="card"><h3>Total Advisories</h3><p id="total-count">0</p></div>
+  <div class="card"><h3>By Source</h3><ul id="sources-list"></ul></div>
+  <div class="card"><h3>Top Alerts</h3>
+    <ul id="alerts-list">
+      {% for a in alerts[:5] %}
+      <li><strong>{{ a.title }}</strong> – {{ a.source }} – {{ a.severity }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="card"><h3>New/Updated CVEs</h3>
+    <div class="chart-container"><canvas id="cveDonut"></canvas></div>
+  </div>
+  <div class="card"><h3>CVSS Score Distribution</h3>
+    <div class="chart-container"><canvas id="cvssBar"></canvas></div>
+  </div>
+  <div class="card"><h3>Stats</h3>
+    <div id="cveStatsText"></div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="card" style="grid-column: span 2;">
+    <h3>Real-Time Threat Feed</h3>
+    <div class="scrollable">
+      <table id="feed-table">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Title / ID</th>
+            <th>Severity</th>
+            <th>Published</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for a in advisories %}
+          <tr>
+            <td>{{ a.source }}</td>
+            <td class="title-cell" title="{{ a.title }}">{{ a.title }}</td>
+            <td>{{ a.severity }}</td>
+            <td>{{ a.published }}</td>
+            <td class="description-cell" title="{{ a.description }}">{{ a.description }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Global Map of IOCs</h3>
+    <div id="map"></div>
+  </div>
+</div>
+
+<script>
+const MARKERS = {{ markers|tojson }};
+const cveStats = {{ cve_stats | tojson }};
+const cvssBins = {{ cvss_bins | tojson }};
+
+// ===== Load Advisories & Sources =====
+fetch("/api/advisories")
+  .then(res => res.json())
+  .then(data => {
+    // Update Total Advisories
+    document.getElementById("total-count").textContent = data.length;
+
+    // Count by source
+    const sourceCounts = {};
+    data.forEach(a => {
+      sourceCounts[a.source] = (sourceCounts[a.source] || 0) + 1;
+    });
+
+    // Populate source list
+    const list = document.getElementById("sources-list");
+    list.innerHTML = "";
+    for (const [src, count] of Object.entries(sourceCounts)) {
+      const li = document.createElement("li");
+      li.textContent = `${src}: ${count}`;
+      list.appendChild(li);
+    }
+  })
+  .catch(err => console.error("Error loading advisories:", err));
+
+// ===== Donut Chart =====
+new Chart(document.getElementById('cveDonut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Created Today', 'Updated Today', 'Created 7d', 'Updated 7d', 'Created 30d', 'Updated 30d'],
+    datasets: [{
+      data: [
+        cveStats.created_today, cveStats.updated_today,
+        cveStats.created_7, cveStats.updated_7,
+        cveStats.created_30, cveStats.updated_30
+      ],
+      backgroundColor: ['#ffb84d', '#36a2eb', '#ff9933', '#ff6384', '#ff6600', '#8e44ad'],
+      borderWidth: 1
+    }]
+  },
+  options: { responsive: true, cutout: '70%', plugins: { legend: { position: 'bottom', labels: { color: '#fff' } } } }
+});
+
+// ===== CVSS Bar Chart =====
+new Chart(document.getElementById('cvssBar'), {
+  type: 'bar',
+  data: {
+    labels: ['0-1','1-2','2-3','3-4','4-5','5-6','6-7','7-8','8-9','9+'],
+    datasets: [{
+      label: 'Vulnerabilities',
+      data: cvssBins,
+      backgroundColor: cvssBins.map((_, i) => {
+        if (i <= 2) return '#4caf50';
+        if (i <= 5) return '#ffeb3b';
+        if (i <= 7) return '#ff9800';
+        return '#f44336';
+      }),
+      borderRadius: 6
+    }]
+  },
+  options: { responsive: true, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#fff' } }, y: { ticks: { color: '#fff' }, beginAtZero: true } } }
+});
+
+// ===== Stats text =====
+document.getElementById('cveStatsText').innerHTML = `
+<strong>${cveStats.created_today}</strong> created today, 
+<strong>${cveStats.updated_today}</strong> updated today<br>
+<strong>${cveStats.created_7}</strong> created / <strong>${cveStats.updated_7}</strong> updated (7d)<br>
+<strong>${cveStats.created_30}</strong> created / <strong>${cveStats.updated_30}</strong> updated (30d)
+`;
+
+// ===== Map =====
+(function(){
+  const map = L.map('map').setView([20,0], 2);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18 }).addTo(map);
+  MARKERS.forEach(m => {
+    L.marker([m.lat, m.lon]).addTo(map)
+      .bindPopup(`<strong>${m.title}</strong><br>${m.source}<br>${m.city || ''} ${m.country || ''}<br>${m.ioc || ''}`);
+  });
+})();
+</script>
+
+</body>
+</html>
